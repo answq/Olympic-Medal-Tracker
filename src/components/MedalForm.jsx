@@ -9,10 +9,10 @@ const MedalForm = ({ countries, setCountries }) => {
     bronze: 0,
   });
 
-  const onInputChange = (e) => {
-    console.log(e.target.value);
+  const onInputChange = (e, keyName) => {
+    setCountryInfo({ ...countryInfo, [keyName]: e.target.value }); //인풋창 변화
   };
-
+  console.log(countryInfo);
   const addCountry = (e) => {
     e.preventDefault(); //새로고침방지
 
@@ -31,9 +31,9 @@ const MedalForm = ({ countries, setCountries }) => {
           <div className="input-item">
             <label>국가명</label>
             <input
-              type="test"
-              value={countryInfo.name}
-              onChange={onInputChange}
+              type="text"
+              value={countryInfo.nation}
+              onChange={(e) => onInputChange(e, "nation")}
             />
           </div>
 
@@ -42,7 +42,7 @@ const MedalForm = ({ countries, setCountries }) => {
             <input
               type="number"
               value={countryInfo.gold}
-              onChange={onInputChange}
+              onChange={(e) => onInputChange(e, "gold")}
             />
           </div>
 
@@ -51,7 +51,7 @@ const MedalForm = ({ countries, setCountries }) => {
             <input
               type="number"
               value={countryInfo.silver}
-              onChange={onInputChange}
+              onChange={(e) => onInputChange(e, "silver")}
             />
           </div>
 
@@ -60,7 +60,7 @@ const MedalForm = ({ countries, setCountries }) => {
             <input
               type="number"
               value={countryInfo.bronze}
-              onChange={onInputChange}
+              onChange={(e) => onInputChange(e, "bronze")}
             />
           </div>
 
@@ -75,4 +75,3 @@ const MedalForm = ({ countries, setCountries }) => {
 };
 
 export default MedalForm;
-
