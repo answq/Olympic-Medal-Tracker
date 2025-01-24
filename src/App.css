@@ -1,9 +1,13 @@
+.root {
+  justify-content: center;
+  align-items: center;
+}
+
 .container {
   width: 100%;
-  margin: 0 auto;
   display: flex;
   justify-content: center;
-  align-items: end;
+  align-items: center;
   gap: 2%;
   text-align: center;
 }
@@ -16,17 +20,61 @@
 
 .medal-container {
   margin: 40px auto;
-  background-color: rgb(222, 127, 203);
+  background-color: white;
   padding: 20px;
   border-radius: 20px;
+  box-shadow: 0px 4px 10px;
+  align-items: center;
+}
+
+.input-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 20px;
+  ;
 }
 
 form {
   display: flex;
+  justify-content: center;
   align-items: center;
   gap: 10px;
 }
 
+.button-container {
+  display: flex;
+  gap: 10px;
+}
+
+.button-container button {
+  background-color: orange;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.medal-table {
+  width: 90%;
+  border-collapse: collapse; /* 경계선이 겹치지 않게 */
+  margin: 30px auto;
+}
+
 .medal-table th {
-  background-color: green;
+  background-color: rgb(25, 78, 110);
+  color: white;
+  font-weight: bold;
+}
+
+.medal-table tr:nth-child(even) {
+  background-color: #d9d9d9;
+}
+
+.medal-table td {
+  border: none;
+  padding: 16px;
+  text-align: center;
+}
+
+.medal-table tr:nth-child(even) {
+  background-color: #b5d0eb;
 }

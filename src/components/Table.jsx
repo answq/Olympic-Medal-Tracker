@@ -1,8 +1,9 @@
 import React from "react";
-import { useState } from "react";
 
 const Table = ({ countries, setCountries }) => {
   const sortedCountries = [...countries].sort((a, b) => b.gold - a.gold);
+
+  
   return (
     <table className="medal-table">
       <thead>
