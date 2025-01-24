@@ -1,13 +1,8 @@
-.root {
-  justify-content: center;
-  align-items: center;
-}
-
 .container {
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: end;
   gap: 2%;
   text-align: center;
 }
@@ -19,26 +14,22 @@
 }
 
 .medal-container {
-  margin: 40px auto;
   background-color: white;
   padding: 20px;
   border-radius: 20px;
   box-shadow: 0px 4px 10px;
-  align-items: center;
 }
 
 .input-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-right: 20px;
-  ;
 }
 
 form {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: end;
   gap: 10px;
 }
 
@@ -50,6 +41,7 @@ form {
 .button-container button {
   background-color: orange;
   font-weight: bold;
+  font-size: small;
   cursor: pointer;
 }
 
@@ -71,10 +63,16 @@ form {
 
 .medal-table td {
   border: none;
-  padding: 16px;
+  padding: 8px;
   text-align: center;
 }
 
 .medal-table tr:nth-child(even) {
   background-color: #b5d0eb;
+}
+
+.delete {
+  background-color: rgb(245, 67, 67);
+  font-weight: bold;
+  color: white;
 }

@@ -34,7 +34,7 @@ const Table = ({ countries, setCountries }) => {
             <td>{country.silver}</td>
             <td>{country.bronze}</td>
             <td>
-              <button onClick={() => deleteCountry(country.nation)}>
+              <button className="delete" onClick={() => deleteCountry(country.nation)}>
                 삭제
               </button>
             </td>

@@ -55,7 +55,7 @@ const MedalForm = ({ countries, setCountries }) => {
   };
   return (
     <>
-      <div className="container">
+      <div className="box">
         <form onSubmit={addCountry}>
           <div className="input-item">
             <label>국가명</label>
