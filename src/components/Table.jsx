@@ -2,8 +2,19 @@ import React from "react";
 
 const Table = ({ countries, setCountries }) => {
   const sortedCountries = [...countries].sort((a, b) => b.gold - a.gold);
+  //금메달 기준 내림차순 정렬
 
-  
+  const deleteCountry = (nation) => {
+    const filteredCountry = countries.filter((rest) => {
+      if (rest.nation === nation) {
+        return false;
+      } else {
+        return true;
+      }
+    });
+    setCountries(filteredCountry);
+  };
+
   return (
     <table className="medal-table">
       <thead>
@@ -23,7 +34,9 @@ const Table = ({ countries, setCountries }) => {
             <td>{country.silver}</td>
             <td>{country.bronze}</td>
             <td>
-              <button>삭제</button>
+              <button onClick={() => deleteCountry(country.nation)}>
+                삭제
+              </button>
             </td>
           </tr>
         ))}

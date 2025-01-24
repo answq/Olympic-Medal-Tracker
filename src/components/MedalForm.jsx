@@ -32,6 +32,27 @@ const MedalForm = ({ countries, setCountries }) => {
     });
   };
 
+  const updateCountry = (nation) => {
+    const updatedCountries = countries.map((element) => {
+      if (element.name === nation.name) {
+        return {
+          ...element,
+          gold: countryInfo.gold,
+          silver: countryInfo.silver,
+          bronze: countryInfo.bronze,
+        };
+      } else {
+        return element;
+      }
+    });
+    setCountries(updatedCountries);
+    setCountryInfo({
+      nation: "",
+      gold: 0,
+      silver: 0,
+      bronze: 0,
+    });
+  };
   return (
     <>
       <div className="container">
@@ -78,7 +99,12 @@ const MedalForm = ({ countries, setCountries }) => {
 
           <div className="button-container">
             <button type="submit">국가 추가</button>
-            <button type="button">업데이트</button>
+            <button
+              type="button"
+              onClick={() => updateCountry(countryInfo.nation)}
+            >
+              업데이트
+            </button>
           </div>
         </form>
       </div>
